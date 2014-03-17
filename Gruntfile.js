@@ -50,7 +50,7 @@ module.exports = function (grunt) {
           globalVars: 'ptor'
         },
         files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'tmp/custom': ['test/fixtures']
         }
       }
     },

@@ -28,8 +28,6 @@ module.exports = function (grunt) {
   };
 
   var processJSON = function(filecontent, outputDir, options){
-      console.log(filecontent);
-      console.log(outputDir);
 
       var filePath = path.join(outputDir, filecontent.modulename + '.js');
 
@@ -51,7 +49,6 @@ module.exports = function (grunt) {
       testString += "});";
 
       grunt.file.write(filePath, testString);
-      //filecontent.element
 
   };
 
@@ -60,9 +57,7 @@ module.exports = function (grunt) {
 
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      punctuation: '.',
-      separator: ', ',
-      beforeEachFn: function(){
+        beforeEachFn: function(){
         ptor = protractor.getInstance();
       },
       globalVars: 'ptor'
@@ -91,24 +86,8 @@ module.exports = function (grunt) {
           });
       });
 
-      // .map(function (dirpath) {
-      //   // Read file source.
-      //   return grunt.file.expand({cwd:dirpath},'*').map(function(filepath){
-      //       grunt.log.writeln(dirpath+'/'+filepath);
-      //       var filecontent = grunt.file.readJSON(dirpath+'/'+filepath);
-      //       return filecontent.elements.length;
-      //   }).join(grunt.util.linefeed);
-      // }).join(grunt.util.linefeed);
-
-      // Handle options.
-      src += options.punctuation;
-
-      grunt.log.writeln(src);
-      // Write the destination file.
-      //grunt.file.write(file.dest, src);
-
       // Print a success message.
-      grunt.log.writeln('File "' + file.dest + '" created.');
+      grunt.log.writeln('Filescreated. in ' + file.dest);
     });
   });
 
