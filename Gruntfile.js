@@ -37,13 +37,17 @@ module.exports = function (grunt) {
         options: {
         },
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'tmp': ['test/fixtures']
         }
       },
       custom_options: {
         options: {
           separator: ': ',
-          punctuation: ' !!!'
+          punctuation: ' !!!',
+          beforeEachFn: function(){
+            ptor = protractor.getInstance();
+          },
+          globalVars: 'ptor'
         },
         files: {
           'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']

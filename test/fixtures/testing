@@ -1,1 +1,21 @@
-Testing
+{
+	"modulename": "homepage",
+	"elements": [
+		{
+			"name": "loginButton",
+			"selector": "#loginButton",
+			"styles": {
+				"height": "100px",
+				"width": "100px"
+			}
+		},
+		{
+			"name": "resetButton",
+			"selector": "#resetButton",
+			"styles": {
+				"height": "100px",
+				"width": "100px"
+			}
+		}
+	]
+}
